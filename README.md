@@ -96,7 +96,7 @@ sudo make uninstall
 
 ## Changelog
 
-### v1.0 — 2026-01-05
+### v0.1 — 2026-01-05
 - Initial release of **services**.
 - Features:
   - Multiple service management in one command.
