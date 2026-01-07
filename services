@@ -27,10 +27,12 @@
 #  SUCH DAMAGE.
 #
 #  Geovanni B.R. (geobarrod) <igeo.cu@gmail.com>, 2026-01-05
-#  Improvements to the original `service(8)` command to allow multiple services
+#  Improvements to the original service(8) command to allow multiple services
 #  management in a single invocation. Supported actions include:
-#  fast, force, one, quiet, start, stop, restart, rcvar, enable, disable, delete, enabled, 
-#  describe, extracommands, reload, configtest, upgrade, gracefulstop, status, poll.
+#  configtest, disable, enable, extracommands, forceconfigtest, forceextracommands, forcegracefulstop,
+#  forcepoll. forcercvar, forcereload, forcerestart, forcestart, forcestatus, forcestop, forceupgrade,
+#  gracefulstop, oneconfigtest, oneextracommands, onegracefulstop, onepoll. onercvar, onereload, onerestart,
+#  onestart, onestatus, onestop, oneupgrade, poll. rcvar, reload, restart, start, status, stop, upgrade.
 
 . /etc/rc.subr
 load_rc_config
@@ -104,7 +106,12 @@ fi
 first=$1
 shift
 
-actions="fast force one quiet start stop restart rcvar enable disable delete enabled describe extracommands reload configtest upgrade gracefulstop status poll"
+actions="
+configtest disable enable extracommands forceconfigtest forceextracommands forcegracefulstop
+forcepoll forcercvar forcereload forcerestart forcestart forcestatus forcestop forceupgrade
+gracefulstop oneconfigtest oneextracommands onegracefulstop onepoll onercvar onereload onerestart
+onestart onestatus onestop oneupgrade poll rcvar reload restart start status stop upgrade
+"
 
 is_action=0
 for a in $actions; do

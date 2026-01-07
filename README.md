@@ -3,8 +3,10 @@
 ## Purpose
 Improvements to the original `service(8)` command to allow **multiple services management** in a single invocation.
 Supported actions include:
-`fast`, `force`, `one`, `quiet`, `start`, `stop`, `restart`, `rcvar`, `enable`, `disable`, `delete`, `enabled`,
-`describe`, `extracommands`, `reload`, `configtest`, `upgrade`, `gracefulstop`, `status`, `poll`.
+`configtest`, `disable`, `enable`, `extracommands`, `forceconfigtest`, `forceextracommands`, `forcegracefulstop`,
+`forcepoll`. `forcercvar`, `forcereload`, `forcerestart`, `forcestart`, `forcestatus`, `forcestop`, `forceupgrade`,
+`gracefulstop`, `oneconfigtest`, `oneextracommands`, `onegracefulstop`, `onepoll`. `onercvar`, `onereload`, `onerestart`,
+`onestart`, `onestatus`, `onestop`, `oneupgrade`, `poll`. `rcvar`, `reload`, `restart`, `start`, `status`, `stop`, `upgrade`.
 
 ---
 
@@ -67,7 +69,7 @@ services start nginx php_fpm postfix
 services restart sshd unbound
 ```
 
-# Enable/Disable multiple services
+# Enable/disable multiple services
 ```sh
 services enable nginx php_fpm postfix
 services disable sshd unbound
@@ -86,7 +88,7 @@ sudo make install
 ---
 
 ## Uninstallation
-To remove `fbsd-services`:
+To remove `services`:
 ```sh
 cd FBSD-Services
 sudo make uninstall
