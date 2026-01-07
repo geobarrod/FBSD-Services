@@ -69,7 +69,7 @@ services start nginx php_fpm postfix
 services restart sshd unbound
 ```
 
-# Enable/disable multiple services
+# Enable/Disable multiple services
 ```sh
 services enable nginx php_fpm postfix
 services disable sshd unbound
