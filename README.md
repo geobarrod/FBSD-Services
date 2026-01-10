@@ -26,8 +26,8 @@ services <action> <service1> [service2 ...]
 
 ## Options
 - `-d` Enable debugging of rc.d scripts
-- `-j <jail>` Perform actions within the named jail
-- `-E n=val` Set variable `n` to `val` before executing the rc.d script
+- `-j  <jail>` Perform actions within the named jail
+- `-E  n=val` Set variable `n` to `val` before executing the rc.d script
 - `-e` Show services that are enabled
 - `-R` Stop and start enabled local startup services
 - `-l` List all scripts in `/etc/rc.d` and `$local_startup`

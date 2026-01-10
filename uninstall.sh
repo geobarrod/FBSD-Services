@@ -12,7 +12,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Paths
-BIN_DIR="/root/bin"
+BIN_DIR="/usr/local/sbin"
 SCRIPT_NAME="services"
 
 echo "Uninstalling FreeBSD Services..."
@@ -21,12 +21,6 @@ echo "Uninstalling FreeBSD Services..."
 if [ -f "$BIN_DIR/$SCRIPT_NAME" ]; then
   echo "Removing $BIN_DIR/$SCRIPT_NAME..."
   rm -f "$BIN_DIR/$SCRIPT_NAME"
-fi
-
-# Remove /root/bin if empty
-if [ -d "$BIN_DIR" ] && [ -z "$(ls -A "$BIN_DIR")" ]; then
-  echo "Removing empty directory $BIN_DIR..."
-  rmdir "$BIN_DIR"
 fi
 
 echo "Uninstallation complete."

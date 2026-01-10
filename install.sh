@@ -12,16 +12,10 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Paths
-BIN_DIR="/root/bin"
+BIN_DIR="/usr/local/sbin"
 SCRIPT_NAME="services"
 
 echo "Installing FreeBSD Services..."
-
-# Create /root/bin if it doesn't exist
-if [ ! -d "$BIN_DIR" ]; then
-  echo "Creating $BIN_DIR..."
-  mkdir -p "$BIN_DIR"
-fi
 
 # Copy main script
 echo "Copying $SCRIPT_NAME to $BIN_DIR..."
