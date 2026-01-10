@@ -3,7 +3,7 @@
 ## Purpose
 Improvements to the original `service(8)` command to allow **multiple services management** in a single invocation.
 Supported actions include:
-`configtest`, `disable`, `enable`, `extracommands`, `forceconfigtest`, `forceextracommands`, `forcegracefulstop`,
+`configtest`, `disable`, `enable`, `enabled`, `extracommands`, `forceconfigtest`, `forceextracommands`, `forcegracefulstop`,
 `forcepoll`. `forcercvar`, `forcereload`, `forcerestart`, `forcestart`, `forcestatus`, `forcestop`, `forceupgrade`,
 `gracefulstop`, `oneconfigtest`, `oneextracommands`, `onegracefulstop`, `onepoll`. `onercvar`, `onereload`, `onerestart`,
 `onestart`, `onestatus`, `onestop`, `oneupgrade`, `poll`. `rcvar`, `reload`, `restart`, `start`, `status`, `stop`, `upgrade`.
